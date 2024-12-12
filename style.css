@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@400..700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: #003c50;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #002b3900; /* Transparent by default */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Navigation bar with visible background */
+nav.scrolled {
+    background-color: rgba(0, 43, 57, 0.9); /* Background color when scrolled */
+}
+
+
+.logo img {
+    width: 100px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    border-bottom: 3px solid #00a9e2;
+    color: #00bfff;
+    border-radius: 5px;
+}
+
+/* Discord Login Button */
+.discord-btn {
+    background-color: #5865F2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.discord-btn:hover {
+    background-color: #4752C4;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+/* Container for the menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #003c50;
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Show the menu when active */
+.menu.active {
+    display: flex;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Menu icon (hamburger or X) */
+.menu-icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.menu-icon:before,
+.menu-icon:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:before {
+    top: 0;
+}
+
+.menu-icon:after {
+    bottom: 0;
+}
+
+/* When the menu is active, change the icon to X */
+.menu-icon.active:before {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.menu-icon.active:after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+}
+
+/* The menu items */
+.menu li {
+    text-align: center;
+    list-style-type: none;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.menu li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.menu li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.menu li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* Hover effect for menu items */
+.menu li:hover {
+    background-color: #004f64;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Animation keyframes for sliding menu */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Animation keyframes for menu items */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the menu items */
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+
+    .discord-btn {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        border-radius: 10px;
+        color: white;
+        max-width: 800px;
+        width: 100%;
+        margin-top: 130px;
+        width: 100%;
+        border-left: 5px solid blue;
+    }
+    nav{
+        width: 100%;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .welcome {
+        width: 100%;
+    }
+
+    .dis h1 {
+        font-size: 40px;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    footer {
+        padding: 15px;
+        width: 100%;
+        margin-top: 120px;
+    }
+    .dis h1,p,input{
+        margin-top: 0px;
+        text-align: left;
+    }
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+    .dis{
+        width: 100%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://via.placeholder.com/1200x600');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #f8b400;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff9900;
+}
+
+section img{
+    width: auto;
+    height: auto;
+    background-image: url(img/back.webp);
+}
+
+/* General Section Styling */
+section {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/back.jpeg'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Ensure the background does not repeat */
+}
+
+/* Welcome Section Styling */
+.welcome {
+    text-align: center; /* Center the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* White text color */
+    max-width: 800px; /* Limit the width of the content */
+    width: 100%;
+}
+
+/* Heading Styling */
+.welcome h1 {
+    font-size: 3em; /* Adjust the size of the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    font-weight: bold; /* Make the heading bold */
+    font-family: "Dancing Script", cursive;
+}
+
+/* Paragraph Styling */
+.welcome p {
+    font-size: 1.2em; /* Slightly larger text for the paragraph */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-top: 20px; /* Add space above the paragraph */
+}
+
+/* Discord Login Button */
+.discord-btn {
+    display: inline-block;
+    background-color: #5865F2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.discord-btn:hover {
+    background-color: #4752C4;
+}
+
+/* Profile Avatar */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.5);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50px; 
+    right: 0; 
+    background-color: #cd0000;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+    width: 120px;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #440000;
+}
+
+/* Show the dropdown when hovering over profile container */
+.profile-container:hover .dropdown-menu {
+    display: block;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    border-left: 5px solid blue;
+}
+
+/* Dis Section */
+.dis {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/BACK2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(1.2) contrast(1.5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dis h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 60px;
+    color: white; /* You can adjust the color to your preference */
+}
+
+.left {
+    width: 100%;
+    max-width: 500px; /* Adjust width for responsive behavior */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adding some background to make text stand out */
+    border-radius: 10px;
+    color: white; /* Text color for better visibility */
+}
+
+input {
+    background-color: #5865F2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    margin-left: 20px;
+    height: 50px;
+    width: 100%;
+    max-width: 200px; /* Limit max width for better appearance on mobile */
+    border: 2px solid #5865F2;
+    animation: anim 2s;
+}
+
+input:hover {
+    width: 220px;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    .left {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .dis h1 {
+        font-size: 36px; /* Adjust heading size for smaller screens */
+        text-align: center;
+    }
+    .dis p{
+        text-align: center;
+    }
+
+    input {
+        width: 90%; /* Make input width more responsive on smaller screens */
+    }
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 15px;
+    font-size: 1.5rem;
+}
+
+footer .social-icons a:hover {
+    color: #007bff;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@400..700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy RolePlay - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/legacy.png">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/legacy.png" alt="logo legacy roleplay">
+            </a>
+        </div>
+<!-- Menu Button (Hamburger or Close Icon) -->
+<div class="menu-icon" id="menuToggle"></div>
+
+<!-- Menu -->
+<ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#how">How To Join</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+
+
+    </nav>
+
+    <!-- Section with Background Image and Centered Content -->
+    <section>
+    <div class="welcome">
+        <h1>Legacy RolePlay</h1>
+        <p>
+            Dive into our world of roleplay where everyone is welcome,
+            Regardless of your PC specs. At Legacy Roleplay, we believe in the power of creativity and community.
+            Whether you're on a high-end rig or a modest setup, Join us today and experience roleplaying without limits!
+        </p>
+    </div>   
+</section>
+<div class="about" id="about">
+<p>Welcome to Legacy Roleplay Server!</p><br>
+
+<p>Dive into our world of roleplay where everyone is welcome,<br>
+Regardless of your PC specs. At Legacy Roleplay, we believe in <br> the power of creativity and community. Whether you're on <br> a high-end rig or a modest setup, Join us today and experience <br> roleplaying without limits!</p>
+
+<p>SO our mission is to create a vibrant roleplaying environment <br> with a strong emphasis on community and government. We strive <br> to provide a dedicated and supportive staff team committed to <br> ensuring fair play and fostering creativity. Our goal is to <br> facilitate memorable experiences through effective <br> governance and attentive moderation.</p>
+<br>
+<p>In Legacy, you can find :<br>
+• Factions: Police | Ems | Mecano | Municipality and others<br>
+• Creativity OF: Scripts | Mapping | Models<br>
+• Anti-cheat<br>
+• Active Staff team and Developers</p>
+
+<p>𝗧𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗚𝗧𝗔 𝗦𝗔𝗡 𝗔𝗡𝗗𝗥𝗘𝗔𝗦 : <a href="https://www.mediafire.com/file/g6w05btbfro7bag/GTA_San_Andreas_Stone_Age.rar/file">Link Gta san andreas</a></p>
+
+<p>𝗧𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗠𝗧𝗔 𝗦𝗔𝗡 𝗔𝗡𝗗𝗥𝗘𝗔𝗦 : <a href="https://multitheftauto.com/">Link Mta Sa</a></p>
+<br>
+<p>Make sure to read rules and enjoy your journey with us 🌹</p>
+    </div> 
+
+
+<div class="dis" id="how">
+    <div class="right">
+        <h1>Join Our Community</h1><br>
+        <p>To Join Game First Join To Our Server Discord <br>to get the ip and verify yourself</p><br>
+        <input type="submit" value="Join Server Discord">
+    </div>
+
+</div>
+<br><br>
+<!-- Footer Section -->
+<footer id="contact">
+    <p>&copy; 2024 Legacy RolePlay | All Rights Reserved</p>
+    <div class="social-icons">
+        <a href="https://discord.gg/SFxWU2r7" target="_blank">Discord</a>
+        <p>Page Create By rayen#7892</p>
+    </div>
+</footer>
+
+<script>
+// Get references to the menu and menu toggle icon
+const menu = document.getElementById('menu');
+const menuToggle = document.getElementById('menuToggle');
+
+// Toggle the menu open and closed
+menuToggle.addEventListener('click', () => {
+    // Toggle the menu visibility
+    menu.classList.toggle('active');
+
+    // Toggle the hamburger/X icon
+    menuToggle.classList.toggle('active');
+});
+
+</script>
+
+<script>
+let lastScrollTop = 0; // Keep track of the last scroll position
+
+window.addEventListener('scroll', function() {
+    let nav = document.querySelector('nav'); // Select the nav element
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        nav.classList.add('scrolled');
+    } else {
+        // Scrolling up
+        nav.classList.remove('scrolled');
+    }
+
+    // Update the last scroll position to the current one
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+</script>
+
+</body>
+</html>
